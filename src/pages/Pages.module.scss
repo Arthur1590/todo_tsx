@@ -1,0 +1,26 @@
+@import '../scss//main.scss';
+
+.home {
+	user-select: none;
+	.modal_btn {
+		position: fixed;
+		bottom: .5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $primary;
+		background: $bg;
+		backdrop-filter: blur(7.5px);
+		outline: 1px solid #fff;
+		min-width: 50px;
+		min-height: 50px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		transition: 0.3s all ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			box-shadow: inset 0 0 15px #fff;
+		}
+	}
+}

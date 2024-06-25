@@ -1,0 +1,59 @@
+@import '../../scss/main.scss';
+
+.note__list {
+	display: block;
+	min-width: 500px;
+	min-height: 500px;
+	box-shadow: 0 0 5px #ffff;
+	border-radius: 1.5rem;
+	padding: 1rem .5rem;
+	margin-bottom: 1rem;
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-auto-rows: auto;
+		gap: 1rem;
+	}
+
+	&_card {
+		width: 100%;
+		min-width: 10rem;
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1rem;
+		box-shadow: 0 0 3px #fff;
+
+		.holder {
+			display: flex;
+			flex-flow: column wrap;
+		}
+
+		&_title {
+			color: $primary;
+			font-size: clamp(1rem, 2.5vw, 1.5rem);
+		}
+		&_content {
+			max-width: 5rem;
+			color: #fff;
+			font-size: clamp(1rem, 1.5vw, 1.2rem);
+		}
+
+		button {
+			padding: 0.4rem 1.2rem;
+			border: 1px solid $primary;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: .3s all ease-in-out;
+
+			&:hover {
+				background: $primary;
+				color: #fff;
+			}
+		}
+	}
+}

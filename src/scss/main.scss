@@ -1,0 +1,68 @@
+@import './fonts.scss';
+
+$primary: #ff014f;
+$secondary: #626770;
+$link: #cedff6;
+$bg: #1f2125;
+$bgheader: #21242830;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+button,
+input {
+	background: none;
+	border: none;
+	outline: none;
+}
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:is(li, ul, a) {
+	text-decoration: none;
+	list-style: none;
+	color: #000;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	font-weight: 400;
+	font-family: 'FiraCode';
+	font-size: clamp(1rem, 1.5vw, 1.3rem);
+	color: #fff;
+	background: #1f2125;
+
+	.container {
+		max-width: 1250px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+}
+
+.App {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.main {
+		flex-grow: 1;
+	}
+
+	.section__title {
+		color: $primary;
+		font-size: clamp(1rem, 3.5vw, 3.5rem);
+		margin: 10.5rem 0 5rem 0;
+	}
+}
+
+body, .App, button, div, a {
+	cursor: url('../components/UI/cursor/cursor.png'), auto;
+}

@@ -1,0 +1,83 @@
+@import '../../scss/main.scss';
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	padding-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #00000025;
+	backdrop-filter: blur(7.5px);
+	padding: 1rem;
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.5rem;
+		border: 1px solid $primary;
+		padding: 1rem;
+
+		h2 {
+			margin-bottom: 1.5rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 1px solid $primary;
+		}
+
+		&_inputs {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2rem;
+
+			label {
+				width: 100%;
+				position: relative;
+
+				span {
+					position: absolute;
+					top: -14px;
+					left: 0;
+					transition: 0.3s all ease-in-out;
+				}
+
+				input {
+					color: #fff;
+					padding: 0.4rem 1.2rem;
+					border-bottom: 1px solid #fff;
+					width: 100%;
+					&:focus ~ span {
+						transform: translateY(-20px);
+					}
+				}
+			}
+		}
+
+		&_btns {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&_add {
+				color: $primary;
+				font-size: 1rem;
+				font-weight: 400;
+				padding: 0.4rem 1.2rem;
+				border: 1px solid $primary;
+				transition: .3s all ease-in-out;
+
+				&:hover {
+					background: $primary;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

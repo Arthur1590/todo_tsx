@@ -1,0 +1,36 @@
+@import '../../scss/main.scss';
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0rem 0.44rem 0.81rem 0rem #0000002b;
+	backdrop-filter: blur(7.5px);
+	background: $bgheader;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.2rem 0;
+
+		h1 {
+		font-size: clamp(1rem, 3.5vw, 2.5rem);
+
+		}
+
+		&_list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			a {
+				color: $primary;
+				display: block;
+				padding: 0.2rem 1.2rem;
+				font-size: clamp(1rem, 2.5vw, 1.5rem);
+			}
+		}
+	}
+}
