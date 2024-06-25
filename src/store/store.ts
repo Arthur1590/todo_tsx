@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export const useStore = create<IUseStore>((set, get) => ({
+export const useStore = create<IUseStore>((set) => ({
 	note: JSON.parse(localStorage.getItem('note') || '[]'),
 	addNote: (title: string, content: string) =>
 		set(state => {
